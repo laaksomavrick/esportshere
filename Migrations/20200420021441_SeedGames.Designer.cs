@@ -2,15 +2,17 @@
 using Esportshere.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Esportshere.Migrations
 {
     [DbContext(typeof(EsportshereContext))]
-    partial class EsportshereContextModelSnapshot : ModelSnapshot
+    [Migration("20200420021441_SeedGames")]
+    partial class SeedGames
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
