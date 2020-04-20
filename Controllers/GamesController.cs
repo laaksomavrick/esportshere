@@ -1,11 +1,9 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Esportshere.Models;
+using Esportshere.Data;
 using Microsoft.Extensions.Logging;
 
 namespace Esportshere.Controllers
