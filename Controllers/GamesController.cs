@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Esportshere.Models;
 using Esportshere.Data;
 using Microsoft.Extensions.Logging;
+using System.Linq;
+using Esportshere.Dto;
+
 
 namespace Esportshere.Controllers
 {
@@ -23,9 +26,16 @@ namespace Esportshere.Controllers
 
         // GET: api/Games
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Game>>> GetGames()
+        public async Task<ActionResult<IEnumerable<GetGamesDto>>> GetGames()
         {
-            return await _context.Games.ToListAsync();
+            return await _context.Games
+            .Select(g => new GetGamesDto
+            {
+                Id = g.Id,
+                Name = g.Name,
+                ShortName = g.ShortName
+            })
+            .ToListAsync();
         }
 
         // GET: api/Games/5

@@ -8,6 +8,8 @@ namespace Esportshere.Data
 
         public DbSet<Game> Games { get; set; }
 
+        public DbSet<Event> Events { get; set; }
+
         public EsportshereContext(DbContextOptions<EsportshereContext> options) : base(options)
         {
         }
